@@ -3,4 +3,6 @@
 
 en:
   products:
-    title: "Browse Products"
+    index:
+      title: "Browse Products"
+      description: "Thank you for visiting our store. Now take out your wallet and buy something."
