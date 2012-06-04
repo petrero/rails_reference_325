@@ -9,7 +9,9 @@
   <body>
     <div id="container">
       <div id="nav">
-        TODO: add language selection here
+        Language:
+        <%= link_to_unless_current "English", locale: "en" %>
+        <%= link_to_unless_current "Romana", locale: "ro" %>
       </div>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, id: "flash_#{name}" %>
