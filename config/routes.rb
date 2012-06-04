@@ -1,4 +1,6 @@
 RailsReference325::Application.routes.draw do
-  resources :products
-  root to: 'products#index'
+  scope ":locale" do
+    resources :products
+    root to: 'products#index'
+  end
 end
