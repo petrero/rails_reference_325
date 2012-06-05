@@ -1,0 +1,2 @@
+//alternatives
+http://pry.github.com (covered in railscast Ep280)
