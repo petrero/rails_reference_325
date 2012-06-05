@@ -1,6 +1,6 @@
 <h1>Products</h1>
 
-<table id="products" class="display">
+<table id="products" class="display" data-source="<%= products_url(format: "json") %>">
   <thead>
     <tr>
       <th>Product Name</th>
@@ -10,14 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= link_to(product.name, product) %></td>
-        <td><%= product.category %></td>
-        <td><%= product.released_on.strftime("%B %e, %Y") %></td>
-        <td><%= number_to_currency(product.price) %></td>
-      </tr>
-    <% end %>
+    
   </tbody>
 </table>
 
