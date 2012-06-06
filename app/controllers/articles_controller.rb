@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    logger.debug "Article Count: #{@articles.size}"
+    #logger.debug "Article Count: #{@articles.size}"
+    Rails.logger.debug
   end
 
   def show
