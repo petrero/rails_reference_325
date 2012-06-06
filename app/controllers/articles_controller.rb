@@ -42,3 +42,5 @@ class ArticlesController < ApplicationController
     redirect_to articles_url, notice: "Successfully destroyed article."
   end
 end
+
+

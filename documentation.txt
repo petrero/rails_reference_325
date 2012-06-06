@@ -1,0 +1,1 @@
+http://www.ruby-doc.org/stdlib-1.9.3/libdoc/logger/rdoc/Logger.html
