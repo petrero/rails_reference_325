@@ -37,3 +37,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 gem 'quiet_assets', group: :development
+gem 'thin', group: :development
