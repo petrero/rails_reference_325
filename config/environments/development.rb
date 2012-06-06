@@ -1,5 +1,5 @@
 RailsReference325::Application.configure do
-  config.log_tags = [:uuid, :remote_ip]
+  config.log_tags = [:uuid, :remote_ip, lambda {|req| Time.now}]
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
