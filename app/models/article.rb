@@ -6,7 +6,8 @@ class Article < ActiveRecord::Base
   include PgSearch
   pg_search_scope :search, against: [:name, :content],
     using: {tsearch: {dictionary: "english"}},
-    associated_against: {author: :name, comments: [:name, :content]}  
+    associated_against: {author: :name, comments: [:name, :content]}, 
+    ignoring: :accents  
   
   def self.text_search(query)
     if query.present?
