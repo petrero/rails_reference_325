@@ -1,0 +1,8 @@
+https://github.com/Casecommons/pg_search
+
+
+
+http://tenderlove.github.com/texticle/
+
+
+http://www.postgresql.org/docs/9.1/static/textsearch-indexes.html
