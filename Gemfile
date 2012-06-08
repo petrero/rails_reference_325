@@ -23,9 +23,10 @@ end
 gem 'jquery-rails'
 gem 'will_paginate'
 gem 'pg'
-gem 'texticle', require: 'texticle/rails'
+#gem 'texticle', require: 'texticle/rails'
 gem 'quiet_assets', group: :development
 gem 'thin', group: :development
+gem 'pg_search'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
