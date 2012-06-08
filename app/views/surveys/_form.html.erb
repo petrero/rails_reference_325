@@ -16,12 +16,7 @@
   </div>
   
   <%= f.fields_for :questions do |builder| %>
-    <fieldset>
-      <%= builder.label :content, "Question" %><br />
-      <%= builder.text_area :content %><br />
-      <%= builder.check_box :_destroy %>
-      <%= builder.label :_destroy, "Remove Question" %>
-    </fieldset>
+    <%= render "question_fields", f: builder %> 
   <% end %>
   <div class="actions">
     <%= f.submit %>
