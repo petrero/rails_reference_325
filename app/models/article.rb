@@ -5,7 +5,11 @@ class Article < ActiveRecord::Base
 
   def self.text_search(query)
     if query.present?
-      where("name @@ :q or content @@ :q", q: query)
+      rank = <<-RANK
+        ts_rank(to_tsvector(name), plainto_tsquery(#{sanitize(query)})) +
+        ts_rank(to_tsvector(content), plainto_tsquery(#{sanitize(query)}))
+      RANK
+      where("name @@ :q or content @@ :q", q: query).order("#{rank} desc")
     else
       scoped
     end
