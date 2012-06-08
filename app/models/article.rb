@@ -4,7 +4,8 @@ class Article < ActiveRecord::Base
   has_many :comments
 
   include PgSearch
-  pg_search_scope :search, against: [:name, :content]
+  pg_search_scope :search, against: [:name, :content],
+    using: {tsearch: {dictionary: "english"}}  
   
   def self.text_search(query)
     if query.present?
