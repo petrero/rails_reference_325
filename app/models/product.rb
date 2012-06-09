@@ -6,6 +6,9 @@ class Product < ActiveRecord::Base
   #store_accessor :properties, :author //is provided in Rails3.2 but is incompatible with the gem
   %w[author runtime rating].each do |key|
     attr_accessible key
+    scope "has_#{key}", lambda {|value| where("properties @> (? => ?)", key, value)}
+    
+    
     define_method(key) do
       properties && properties[key]
     end
