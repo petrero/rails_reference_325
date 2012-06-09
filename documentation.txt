@@ -1,0 +1,10 @@
+//alternative approach to deal with hstore attributes in a form
+http://hstoredemo.herokuapp.com/products/new#
+
+
+
+https://github.com/softa/activerecord-postgres-hstore
+
+
+
+http://www.postgresql.org/docs/9.1/static/hstore.html
