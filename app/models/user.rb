@@ -3,4 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password 
   
   validates_format_of :twitter_username, without: /\W/, allow_blank: true 
+  
+  validates_presence_of :twitter_username, if: :on_social_step? 
+  #on: :create, message: "can't be blank"
 end
