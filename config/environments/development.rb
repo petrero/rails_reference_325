@@ -28,6 +28,9 @@ RailsReference325::Application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
   }
+  
+  #specify what domain to use for mailer URLs
+  config.action_mailer.default_url_options = {host: "localhost:3000"}
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -47,4 +50,5 @@ RailsReference325::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
 end
