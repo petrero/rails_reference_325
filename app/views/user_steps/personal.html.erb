@@ -1,5 +1,16 @@
 <%= form_for @user, url: wizard_path do |f| %>
   <h2>Tell us a little about yourself</h2>
+   
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@user.errors.count, "error") %></h2> prohibited this user from being saved:</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
