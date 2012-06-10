@@ -12,4 +12,9 @@ class UserStepsController < ApplicationController
     @user.attributes = params[:user]
     render_wizard @user #will attempt to save the user and if it fails will rerender the same step again
   end
+  
+private
+  def redirect_to_finish_wizard
+    redirect_to root_url, notice: "Thank you for signing up."
+  end
 end
