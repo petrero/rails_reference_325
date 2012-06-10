@@ -1,0 +1,7 @@
+railscasts ep217
+
+http://github.com/schneems/wicked
+
+
+//demo creating multistep form with jQuery
+http://www.jankoatwarpspeed.com/examples/webform_to_wizard 
