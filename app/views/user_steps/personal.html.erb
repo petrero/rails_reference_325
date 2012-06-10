@@ -1,16 +1,5 @@
-<%= form_for @user, url: wizard_path do |f| %>
-  <h2>Tell us a little about yourself</h2>
-   
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2><%= pluralize(@user.errors.count, "error") %></h2> prohibited this user from being saved:</h2>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<h2>Tell us a little about yourself</h2>
+<%= render :layout => 'form' do |f| %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -22,9 +11,5 @@
   <div class="field">
     <%= f.label :bio %><br />
     <%= f.text_area :bio, rows: 5 %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Continue" %>
-    or <%= link_to "skip this step", next_wizard_path %>
   </div>
 <% end %>
