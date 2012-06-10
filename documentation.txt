@@ -1,0 +1,9 @@
+railscasts ep312 styling the email
+railscasts ep275 automated tests for mailer
+railscasts tagged background jobs
+
+
+http://guides.rubyonrails.org/action_mailer_basics.html
+http://github.com/rails/rails/blob/master/actionmailer/lib/action_mailer/base.rb
+http://api.rubyonrails.org/
+
