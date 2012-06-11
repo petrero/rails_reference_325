@@ -33,6 +33,7 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
+gem 'quiet_assets', group: :development
+gem 'thin'
 # To use debugger
 # gem 'debugger'
