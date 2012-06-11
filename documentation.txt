@@ -1,0 +1,8 @@
+//rss authentication
+http://api.rubyonrails.org ActionController::HTTPAuthentication::Basic
+
+//atom_feed helper
+http://api.rubyonrails.org ActionView::Helpers::AtomFeedHelper::AtomFeed
+
+//feed validation service
+http://validator.w3.org/appc/#validate_by_input
