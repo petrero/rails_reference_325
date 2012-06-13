@@ -2,10 +2,10 @@ class Product < ActiveRecord::Base
   belongs_to :category
   attr_accessible :name, :price, :category_id, :released_at, :discontinued_at, :stock
 
-  scope :released,          -> {where("released_at <= ?", Time.zone.now)}
+  generate_scopes
+  
   scope :not_discontinued,   -> {where("discontinued_at is null or discontinued_at > ?", Time.zone.now)}
-  scope :in_stock,          -> {where("stock >= ?", 2)}
-  scope :available,         -> {released.not_discontinued.in_stock}
+  scope :available,         -> {released_at_lteq(Time.zone.now).not_discontinued.stock_gteq(2)}
   
   
   def self.search(query)
