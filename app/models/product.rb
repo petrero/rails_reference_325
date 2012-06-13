@@ -9,8 +9,12 @@ class Product < ActiveRecord::Base
     where do
       (released_at <= Time.zone.now) &
       ((discontinued_at == nil) | (discontinued_at > Time.zone.now)) &
-      (stock > 2) &
+      (stock > my{low_stock}) &
       (name =~ "%#{query}%")
     end
+  end
+  
+  def self.low_stock
+    2
   end
 end
