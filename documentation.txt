@@ -1,0 +1,2 @@
+https://github.com/rails/arel/blob/master/lib/arel/predications.rb
+https://github.com/rails/arel/blob/master/lib/arel/visitors/postgresql.rb
