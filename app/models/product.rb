@@ -9,6 +9,6 @@ class Product < ActiveRecord::Base
   
   
   def self.search(query)
-    available.where("name like ?", "%#{query}%")
+    available.where(arel_table[:name].matches("%#{query}%"))
   end
 end
