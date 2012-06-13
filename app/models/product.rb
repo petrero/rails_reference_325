@@ -6,5 +6,9 @@ class Product < ActiveRecord::Base
   scope :not_discontinued,   -> {where("discontinued_at is null or discontinued_at > ?", Time.zone.now)}
   scope :in_stock,          -> {where("stock >= ?", 2)}
   scope :available,         -> {released.not_discontinued.in_stock}
-  scope :search,            ->(query) { available.where("name like ?", "%#{query}%") }
+  
+  
+  def self.search(query)
+    available.where("name like ?", "%#{query}%")
+  end
 end
