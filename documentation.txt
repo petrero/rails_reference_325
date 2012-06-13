@@ -1,0 +1,4 @@
+http://api.rubyonrails.org/
+ ActionController::HttpAuthentication::Basic
+ ActionController::HttpAuthentication::Token
+ 
