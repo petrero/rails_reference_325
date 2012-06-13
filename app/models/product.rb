@@ -4,5 +4,13 @@ class Product < ActiveRecord::Base
 
   def self.search(query)
     where("released_at <= ? and (discontinued_at is null or discontinued_at > ?) and stock >= ? and name like ?", Time.zone.now, Time.zone.now, 2, "%#{query}%")
+    
+    
+    where do
+      (released_at <= Time.zone.now) &
+      ((discontinued_at == nil) | (discontinued_at > Time.zone.now)) &
+      (stock > 2) &
+      (name =~ "%#{query}%")
+    end
   end
 end
